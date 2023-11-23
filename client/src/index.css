@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    #line {
+      @apply relative;
+    }
+    #line::after {
+      @apply content-[''] absolute bg-green-500 h-[1px] w-[0%]
+    left-0 -bottom-[2px] rounded-lg duration-300;
+    }
+   
+  }
