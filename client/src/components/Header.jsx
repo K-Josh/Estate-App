@@ -19,8 +19,8 @@ export default function Header() {
      </form>
      <ul className='flex gap-4 text-[16px] sm:text-md'>
         <Link to={'/'} className='hidden sm:inline text-slate-600' id='line'>Home</Link>
-        <Link to={'about'} className='hidden sm:inline text-slate-600' id='line'>About</Link>
-        <Link to={'sign-in'} className='text-slate-600' id='line'>SignIn</Link>
+        <Link to={'/about'} className='hidden sm:inline text-slate-600' id='line'>About</Link>
+        <Link to={'/sign-in'} className='text-slate-600' id='line'>SignIn</Link>
      </ul>
    </div>
    </header>
