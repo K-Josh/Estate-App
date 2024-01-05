@@ -46,8 +46,8 @@ const SignUp = () => {
         <input type='text' placeholder='Enter username' className='border p-3 rounded-lg focus:outline-green-600' id='username' onChange={handleChange}/>
         <input type='email' placeholder='Enter email' className='border p-3 rounded-lg focus:outline-red-600' id='email' onChange={handleChange}/>
         <input type='password' placeholder='Enter password' className='border p-3 rounded-lg focus:outline-yellow-500' id='password' onChange={handleChange}/>
-        <button disabled={loading} className='text-white p-2 bg-green-600 rounded-lg uppercase hover:opacity-75 disabled:opacity-80'>
-        {loading ? 'Loading...' : 'Sign up'}
+        <button disabled={loading} className={`${loading ? 'animate-pulse cursor-' : null} text-white p-2 bg-green-600 rounded-lg uppercase hover:opacity-75 disabled:opacity-80 cursor-pointer`}>
+        {loading ? 'Loading ...' : 'Sign up'}
         </button>
       </form>
       <div className='flex gap-2 mt-4'>
