@@ -2,6 +2,7 @@
 => Then it will be saved in a function called newUser from user.model. Then newUser was saved using newUser.save().
 using the .save() will be slow on saving the user's details so we had to put an await in the code line await newUser.save(){so the code will stay in this line until it finishes before going to the next line} and the whole function had to be changed from a synchronous function to an unsynchronous function using the (async).
 Then a res.status().json was sent to the browser to indicate if the user was created successfully.
-=> We then created a middleware solely for handling errors this method prevents to many api routes in our code. so creating the middleware in the server takes 4 parameters (err, req, res, next). we create a statusCode
+=> We then created a middleware solely for handling errors this method prevents to many api routes in our code. so creating the middleware in the server takes 4 parameters (err, req, res, next).
+=> we then created a user authentication validating the user based on his/her credentials for the email we told our database to find a user using the findOne() javascript syntax. For the password we told the database to compare the passwords provided using the bcrypt dependency compare hashSync. Then if the user was found and the password matched then the user was granted a token using the jwt.sign({}) with the user's id hashed using a jwtSecret key. 
 #  we add a proxy in the vite config so that when we fetch the data from the user input it goes directly to the link specified
 <!-- we changed the formData to a string -->
